@@ -1,0 +1,41 @@
+<%if (alerts.success) { %>
+<%alerts.success.forEach(function(msg) {%>
+<div class="row">
+	<div class="card-panel teal lighten-2 ">  
+		<h4>  <%= msg %>  </h4>
+	</div>
+</div>
+<% });%>
+<%}%>
+
+
+<%if(alerts.error) { %>
+<% alerts.error.forEach(function(msg) {%>
+<div class="row">
+	<div class="card red">  
+		<h4>  <%= msg %>  </h4>
+	</div>
+</div>
+<% });%>
+<%}%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
