@@ -14,19 +14,19 @@ app.use(ejsLayouts);
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+// Include controllers
+app.use('/auth', require('./controllers/auth'));
+app.use('/profile', require('./controllers/profile'));
+
+
 // Define routes 
 app.get('/', function(req, res){
-	
 	res.render('home');
 	//res.send('hi from home route');
-})
-
+});
 
 // Listen to the port 3000
 app.listen(3000);
-
-
-
 
 
 
