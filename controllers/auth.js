@@ -14,15 +14,23 @@ router.get('/login', function(req, res) {
 	//res.send('auth login form  page!!!!!!!! ');
 });
 
-router.post('/login', passport.authenticate('local', {
+
+
+router.post('/login', passport.authenticate('local', {  // local goes straight to the passportconfig the use function. 
 	successRedirect: '/profile',
-	successFlash: 'Yay, login successful! :D',
+	successFlash: 'Yay, login successful! :D',  //success message 
 	failureRedirect: '/auth/login',
-	failureFlash: 'Invalid Credentials'
+	failureFlash: 'Invalid Credentials'    //error message 
 })
 	//console.log(req.body);
 	//res.send('login post route ');
 );
+
+
+
+
+
+
 
 
 router.get('/signup', function(req, res) {
@@ -71,3 +79,12 @@ router.get('/logout', function(req, res) {
 
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
