@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "auth-boiler",
+    "database": "goat-express",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAliases": "false"
