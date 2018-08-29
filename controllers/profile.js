@@ -15,3 +15,5 @@ router.get('/', loggedIn, function(req, res) { 	  // loggedIn middleware makes s
 
 
 module.exports = router;
+
+
