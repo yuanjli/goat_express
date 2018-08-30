@@ -1,4 +1,4 @@
-// Require express because express is not globaly 
+// Require express because express is not global 
 var express = require('express');
 
 // Include the models 

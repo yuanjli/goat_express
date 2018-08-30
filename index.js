@@ -45,6 +45,12 @@ app.get('/', function(req, res){
 	//res.send('hi from home route');
 });
 
+app.get('*', function(req, res){
+	res.send('error, and the page does not exist!!');
+	//res.send('hi from home route');
+});
+
+
 // Listen to the port 3000
 app.listen(3000);
 
