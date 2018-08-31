@@ -46,7 +46,7 @@ app.get('/', function(req, res){
 });
 
 app.get('*', function(req, res){
-	res.send('error, and the page does not exist!!');
+	res.render('error');
 	//res.send('hi from home route');
 });
 
