@@ -15,7 +15,8 @@ var app = express();
 // Set up use statements
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false })); // Tell the express to use the bodyParser. 
+													 // extended: false ==> means value can be string or array. 
 app.use(session({
 	secret: process.env.SESSION_SECRET,
 	resave: false,
@@ -37,6 +38,8 @@ app.use(function(req, res, next){
 // Include controllers
 app.use('/auth', require('./controllers/auth'));
 app.use('/profile', require('./controllers/profile'));
+app.use('/reservations', require('./controllers/reservations'));
+
 
 
 // Define routes 
