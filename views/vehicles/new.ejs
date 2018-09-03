@@ -1,0 +1,32 @@
+<h2>Create a new Vehicle</h2>
+
+<form method="POST" action="/articles">
+  <div class="form-group">
+    <label for="name">Title:</label>
+    <input type="text" name="title" placeholder="What is your article about?" class="form-control" required>
+  </div>
+
+  <div class="form-group">
+    <label for="name">Author:</label>
+
+    <select name="authorId" class="form-control"> 	
+    
+    </select>
+
+    Don't see your name? <a href="/authors/new">Register Here</a>!
+  </div>
+
+  <div class="form-group">
+    <label for="name">Content:</label>
+    <textarea name="content" class="form-control"></textarea>
+  </div>
+
+  <div class="form-group">
+  	<label for="tags"> Tags: </label>
+  	<input type="text" name="tags" class="form-control" placeholder="Tag topics! Separate by commas!">
+  </div>
+
+
+  <input type="submit" value="Post Article" class="btn btn-primary">
+
+</form>

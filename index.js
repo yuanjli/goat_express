@@ -39,6 +39,7 @@ app.use(function(req, res, next){
 app.use('/auth', require('./controllers/auth'));
 app.use('/profile', require('./controllers/profile'));
 app.use('/reservations', require('./controllers/reservations'));
+app.use('/vehicles', require('./controllers/vehicles'));
 
 
 

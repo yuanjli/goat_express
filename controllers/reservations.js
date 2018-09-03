@@ -9,8 +9,8 @@ var db = require('../models'); // add it to the database
 
 // Define routes 
 router.get('/', loggedIn, function(req, res) { 	  // loggedIn middleware makes sure that somebody is already logged in. 
-	//res.render('profile/index')
-	res.send('reservation page!!!!!!!! ');
+	res.render('profile/index');
+	//res.send('reservation page!!!!!!!! ');
 });
 
 
