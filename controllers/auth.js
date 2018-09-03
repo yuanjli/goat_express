@@ -8,32 +8,30 @@ var passport = require('../config/passportConfig');
 // Declare a new router 
 var router = express.Router();
 
-// Define routes 
+// Define routes here: 
+// Show login form
 router.get('/login', function(req, res) {
 	res.render('auth/login');
 	//res.send('auth login form  page!!!!!!!! ');
 });
 
-
-
+// hanling login logic
 router.post('/login', passport.authenticate('local', {  // local goes straight to the passportconfig the use function. 
 	successRedirect: '/profile',
 	successFlash: 'Yay, login successful! :D',  //success message 
 	failureRedirect: '/auth/login',
 	failureFlash: 'Invalid Credentials'    //error message 
-})
+}));
 	//console.log(req.body);
 	//res.send('login post route ');
-);
 
-
-
-
+// Show sign up form
 router.get('/signup', function(req, res) {
 	res.render('auth/signup');
 	//res.send('auth signup form  page!!!!!!!! ');
 });
 
+// handling sign up logic 
 router.post('/signup', function(req, res){
 	console.log(req.body);
 	req.body.admin = false;
@@ -61,9 +59,9 @@ router.post('/signup', function(req, res){
 		res.redirect('/auth/signup');
 		//res.send(err);
 	});
-
 });
 
+// logout route
 router.get('/logout', function(req, res) {
 	req.logout();    // logs out of session
 	req.flash('success', 'Successfully logged out!'); 
@@ -89,12 +87,5 @@ router.get('/callback/facebook', passport.authenticate('facebook', {
 
 
 module.exports = router;
-
-
-
-
-
-
-
 
 

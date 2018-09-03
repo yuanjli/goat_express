@@ -14,3 +14,7 @@ router.get('/:id', function(req, res){	// found the author ID
 	//res.send('author show page goes here');
 	res.send('viehcle');
 });
+
+
+
+module.exports = router;

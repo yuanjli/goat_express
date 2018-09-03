@@ -35,7 +35,7 @@ app.use(function(req, res, next){
 });
 
 
-// Include controllers
+// Include controllers (requring routes)
 app.use('/auth', require('./controllers/auth'));
 app.use('/profile', require('./controllers/profile'));
 app.use('/reservations', require('./controllers/reservations'));
