@@ -1,32 +1,28 @@
-<h2>Create a new Vehicle</h2>
+<h2>Create a New Vehicle</h2>
 
-<form method="POST" action="/articles">
+<form method="POST" action="/vehicles">
   <div class="form-group">
-    <label for="name">Title:</label>
-    <input type="text" name="title" placeholder="What is your article about?" class="form-control" required>
+    <label for="name">Make:</label>
+    <input type="text" name="make" placeholder="What's the make of this vehicle?" class="form-control" required>
   </div>
 
   <div class="form-group">
-    <label for="name">Author:</label>
-
-    <select name="authorId" class="form-control"> 	
-    
-    </select>
-
-    Don't see your name? <a href="/authors/new">Register Here</a>!
+    <label for="name">Model:</label>
+    <input type="text" name="model" placeholder="What's the model of this vehicle?" class="form-control">
   </div>
 
   <div class="form-group">
-    <label for="name">Content:</label>
-    <textarea name="content" class="form-control"></textarea>
+    <label for="name">Number of seats:</label>
+    <input type="number" name="numSeats" placeholder="The number of seats in this vehicle?" class="form-control" required>
   </div>
 
   <div class="form-group">
-  	<label for="tags"> Tags: </label>
-  	<input type="text" name="tags" class="form-control" placeholder="Tag topics! Separate by commas!">
-  </div>
+   <input type="checkbox" name="userId" value="1" checked> Must be Admin
+   <br>
+   <hr>
+   Not an admin? <a href="/auth/signup">Register Admin Here!</a>
+ </div>
 
-
-  <input type="submit" value="Post Article" class="btn btn-primary">
+ <input type="submit" value="Add vehicle" class="btn btn-primary light-blue darken-2">
 
 </form>

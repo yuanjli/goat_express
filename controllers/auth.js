@@ -11,8 +11,7 @@ var router = express.Router();
 // Define routes here: 
 // Show login form
 router.get('/login', function(req, res) {
-	res.render('auth/login');
-	//res.send('auth login form  page!!!!!!!! ');
+	res.render('auth/login');   //res.send('auth login form  page!!!!!!!! ');
 });
 
 // hanling login logic

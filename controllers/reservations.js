@@ -1,16 +1,15 @@
+// Requires;
 var express = require('express');
-
 var router = express.Router();
-
 // Get the authorization helper function 
 var loggedIn = require('../middleware/loggedin');
-
 var db = require('../models'); // add it to the database 
 
+
 // Define routes 
-router.get('/', loggedIn, function(req, res) { 	  // loggedIn middleware makes sure that somebody is already logged in. 
-	res.render('profile/index');
-	//res.send('reservation page!!!!!!!! ');
+router.get('/', function(req, res) { 	  // loggedIn middleware makes sure that somebody is already logged in. 
+	//res.render('profile/index');
+	res.send('reservation page!!!!!!!! ');
 });
 
 
@@ -28,3 +27,9 @@ router.post('/addreservation', function(req, res){
 
 
 module.exports = router;
+
+
+
+
+
+

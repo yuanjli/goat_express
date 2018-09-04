@@ -41,8 +41,6 @@ app.use('/profile', require('./controllers/profile'));
 app.use('/reservations', require('./controllers/reservations'));
 app.use('/vehicles', require('./controllers/vehicles'));
 
-
-
 // Define routes 
 app.get('/', function(req, res){
 	res.render('home');
@@ -50,10 +48,10 @@ app.get('/', function(req, res){
 });
 
 app.get('*', function(req, res){
+	console.log('THIS went to the wildcard route');
 	res.render('error');
 	//res.send('hi from home route');
 });
-
 
 // Listen to the port 3000
 app.listen(process.env.PORT || 3000);
