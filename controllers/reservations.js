@@ -11,10 +11,12 @@ var db = require('../models'); // add it to the database
 router.get('/', function(req, res) { 	  // loggedIn middleware makes sure that somebody is already logged in. 
 	//res.send('reservation page!!!!!!!! ');  // for page route testing.
 	db.reservation.findAll().then(function(reservations){
+		console.log('something=======================')
 		res.render('reservations/index', { reservations: reservations });
 	}).catch(function(err){
 		console.log(err);
-		res.render('error');
+		res.render('reservations/index', { reservations: reservations });
+		//res.render('error');
 	})	
 });
 
@@ -24,20 +26,41 @@ router.get('/new', function(req, res){
 	res.render('reservations/new');
 });
 
+// CREATE - add new vehicle to DB; post request for adding a reservation
+router.post('/', function(req, res){ 
+	console.log(req.body);
+	//res.send("you have reached the post route!!!!!");			// for testing purpose
+	//res.send(req.body);										// for testing purpose
+	db.reservation.create(req.body).then(function(createdReservation){
+		res.redirect('/reservations/' + createdReservation.id)
+	}).catch(function(err){
+		console.log(err);
+		res.send(typeof(req.body));	
+		//res.send('Nooooooooo!');
+	});
+});
 
 // Show the reservation page
 router.get('/:id', function(req, res){	// found the author ID
 	//res.send('author show page goes here');
-	res.send('viehcle');
+	//res.send('viehcle');
+		db.vehicle.findOne({
+		where: {id: req.params.id},
+		include: [db.user, db.comment, db.reservation]
+	}).then(function(foundVehicle){
+		db.user.findAll().then(function(allUsers){
+			res.render('vehicles/show', {vehicle: foundVehicle, users: allUsers});
+										// this sends the vehicle and users to the ejs file.
+		}).catch(function(err){
+			console.log(err);
+			res.render('error');
+		});
+	}).catch(function(err){
+		console.log(err);
+		res.render('error');
+	});
 });
 
-  
-// CREATE - add new vehicle to DB; post request for adding a reservation
-router.post('/', function(req, res){ 
-	console.log(req.body);
-	//res.send("you have reached the post route!!!!!");
-	res.send(req.body);
-});
 
 
 module.exports = router;

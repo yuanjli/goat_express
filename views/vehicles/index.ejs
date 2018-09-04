@@ -1,4 +1,4 @@
-<h2> All the reservations are HERE: </h2>
+<h2> All the Vehicles are HERE: </h2>
 
 <% reservations.forEach(function(reservation) {%>
 
@@ -6,7 +6,7 @@
 <div>
 	
 	<a href="/reservations/<%= reservation.id%>" style="font-size:25px">
-		#<%= reservation.startDate %> #<%= reservation.endDate %>
+		#<%= reservation.name %>
 	</a>
 	
 	<a href="/reservations/edit/<%=reservation.id%>" class="btn btn-warning">

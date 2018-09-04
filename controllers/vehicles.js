@@ -30,6 +30,7 @@ router.post('/', function(req, res){
 	});
 });
 
+
 // SHOW the vehicle page 
 router.get('/:id', function(req, res){	// found the vehicle ID
 	//res.send('vehicle show page goes here');
