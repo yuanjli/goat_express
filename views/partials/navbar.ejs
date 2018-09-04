@@ -1,18 +1,43 @@
-  <nav>
-    <div class="nav-wrapper light-blue darken-1">
-      <a href="#" class="brand-logo">GExpress</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="/">Home</a></li>
-        <%if(currentUser) {%>
-        <li><a href="/profile">Profile </a></li>
-        <li><a href="/auth/logout"> Logout </a></li>
-       <%}  else { %> 
-        <li><a href="/auth/login">Login</a></li>
-        <li><a href="/auth/signup/"> Signup </a></li>
-        <% } %>
-      </ul>
-    </div>
-  </nav>
+<!-- Dropdown Structure -->
+<ul id="mobile-nav" class="sidenav">
+  <li><a href="/" class="waves-effect waves-light">Home</a></li>
+  <li><a href="/vehicles" class="waves-effect"> Viecles</a> </li>
+  <%if(currentUser) {%>
+  <li><a href="/reservations/new" class="waves-effect waves-light">Book reservation</a> </li>
+  <li><a href="/reservations" class="waves-effect waves-light ">Reservations</a> </li>
+  <li><a href="/vehicles/new" class="waves-effect waves-light">Add Vehicle</a></li>
+  <li><a href="/profile" class="waves-effect waves-light">Profile </a></li>
+  <li><a href="/auth/logout" class="waves-effect waves-light"> Logout </a></li>
+  <%}  else { %> 
+  <li class="divider"></li>
+  <li><a href="/auth/login">Login</a></li>
+  <li><a href="/auth/signup/"> Signup </a></li>
+  <% } %>
+</ul>
+
+<nav>
+  <div class="nav-wrapper light-blue darken-1">
+    <a href="/" class="brand-logo">GExpress</a>
+
+    <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+      <i class="material-icons">Menu</i>
+    </a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/" class="waves-effect waves-light">Home</a></li>
+      <li><a href="/vehicles" class="waves-effect"> Viecles</a> </li>
+      <%if(currentUser) {%>
+      <li><a href="/reservations/new" class="waves-effect waves-light">Book reservation</a> </li>
+      <li><a href="/reservations" class="waves-effect waves-light ">Reservations</a> </li>
+      <li><a href="/vehicles/new" class="waves-effect waves-light">Add Vehicle</a></li>
+      <li><a href="/profile" class="waves-effect waves-light">Profile </a></li>
+      <li><a href="/auth/logout" class="waves-effect waves-light"> Logout </a></li>
+      <%}  else { %> 
+      <li><a href="/auth/login">Login</a></li>
+      <li><a href="/auth/signup/"> Signup </a></li>
+      <% } %>
+    </ul>
+  </div>
+</nav>
 
 
 

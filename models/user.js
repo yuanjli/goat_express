@@ -44,8 +44,11 @@ module.exports = (sequelize, DataTypes) => {
       }
     }
   });
+  
   user.associate = function(models) {
     // associations can be defined here
+    models.user.hasMany(models.vehicle); // The model user will have many vehicles
+    models.user.hasMany(models.comment);
   };
   user.prototype.isValidPassword = function(typedPassword){
     return bcrypt.compareSync(typedPassword, this.password);

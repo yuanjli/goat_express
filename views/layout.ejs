@@ -3,21 +3,13 @@
 <head>
 	<title> Goat Express </title>
 	<!-- Compiled and minified CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 	<% include partials/navbar %>
-
-	<div class="container">  
-	<hr>
-	<a href="/" class="waves-effect waves-light btn indigo darken-1"> Home </a>
-	<a href="/vehicles" class="waves-effect waves-light btn blue lighten-3"> Viecles</a>
-	<a href="/reservations/new" class="waves-effect waves-light btn blue lighten-3">Book reservation</a>
-	<a href="/reservations" class="waves-effect waves-light btn blue lighten-3">Reservations</a>
-	<a href="/vehicles/new" class="waves-effect waves-light btn blue lighten-3">Add Viecle</a>
-	<hr>
-	</div>
 
 	<div class="container">
 		<%- body %>
@@ -37,6 +29,8 @@
 		$(document).ready(function(){
 			$('.datepicker').datepicker();
 			$('select').formSelect();
+			$(".dropdown-trigger").dropdown();
+			$('.sidenav').sidenav();
 		});
 	</script>
 </body>

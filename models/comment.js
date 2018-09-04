@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   comment.associate = function(models) {
     // associations can be defined here
+    models.reservation.belongsTo(models.user);
+    models.reservation.belongsTo(models.vehicle);
   };
   return comment;
 };
