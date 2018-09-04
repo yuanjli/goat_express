@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   var reservation = sequelize.define('reservation', {
     userId: DataTypes.INTEGER,
-    vehicleID: DataTypes.INTEGER,
+    vehicleId: DataTypes.INTEGER,
     startDate: DataTypes.DATE,
     endDate: DataTypes.DATE
   }, {});

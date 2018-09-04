@@ -14,9 +14,11 @@ router.get('/', function(req, res) { 	  // loggedIn middleware makes sure that s
 		console.log('something=======================')
 		res.render('reservations/index', { reservations: reservations });
 	}).catch(function(err){
+		console.log('something=======================');
 		console.log(err);
-		res.render('reservations/index', { reservations: reservations });
-		//res.render('error');
+		console.log('something=======================');
+		//res.render('reservations/index', { reservations: reservations });
+		res.send('WHAT is going on here?');
 	})	
 });
 
@@ -64,6 +66,8 @@ router.get('/:id', function(req, res){	// found the author ID
 
 
 module.exports = router;
+
+
 
 
 

@@ -4,16 +4,16 @@
 
 <% reservation.userId.forEach(function(a){%>
 		<div>
-			<a href="/reservations/<%= .id %>">
+			<a href="/reservations/<%= a.id %>">
 			<%= a.title %>
 			</a>
 		</div>
-<%}); %>
+<% }); %>
 
 
-<a href="/tags/edit/<%=tag.id%>" class="btn btn-warning">
+<a href="/reservations/edit/<%=reservation.id%>" class="btn btn-warning">
 	Change tag?	
 </a>
-<a href="/tags/<%=tag.id%>" class="btn btn-danger delete-btn">
+<a href="/reservations/<%=reservation.id%>" class="btn btn-danger delete-btn">
 	Delete tag?	
 </a>

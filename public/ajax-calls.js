@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 
 // examples of ajax works as put 
-	$('#edit-tag').submit(function(e){
+	$('.edit-btn').submit(function(e){
 		e.preventDefault();
 		console.log('About to submit a PUT  req');
 
