@@ -6,7 +6,7 @@ var db = require('../models'); // add it to the database
 router.get('/', function(req, res){
 	db.vehicle.findAll().then(function(allVehicles){
 		//res.send('======Here should be the vehicle data======');
-		res.render('home', {vehicle: allVehicles});
+		res.render('vehicles/index', {vehicles: allVehicles});
 	}).catch(function(err){
 		console.log(err);
 		res.send('ooooooops');

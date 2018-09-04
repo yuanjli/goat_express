@@ -1,19 +1,19 @@
 <h2> All the Vehicles are HERE: </h2>
 
-<% reservations.forEach(function(reservation) {%>
+<% vehicles.forEach(function(vehicle) {%>
 
 
 <div>
 	
-	<a href="/reservations/<%= reservation.id%>" style="font-size:25px">
-		#<%= reservation.name %>
+	<a href="/vehicles/<%= vehicle.id%>" style="font-size:25px">
+		==> <%= vehicle.model %>  <==
 	</a>
 	
-	<a href="/reservations/edit/<%=reservation.id%>" class="btn btn-warning">
+	<a href="/vehicles/edit/<%=vehicle.id%>" class="btn btn-warning">
 		Change reservation?	
 	</a>
 	
-	<a href="/reservations/<%=reservation.id%>" class="btn btn-danger delete-btn">
+	<a href="/reservations/<%=vehicle.id%>" class="btn btn-danger delete-btn">
 		Delete reservation?	
 	</a>
 </div>
