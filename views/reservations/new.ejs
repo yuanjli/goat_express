@@ -1,6 +1,62 @@
-<form action="/addreservation" method="POST">
-	<input type="text" name="newReservation" placeholder="Book">
+<h2>Create a new Reservation</h2>
+<h2>  <%= currentUser.firstname %>'s Profile </h2>
 
-	<button> Book Now</button>
-	
+<div class="row">
+  <form class="col s12" method="POST" action="/reservations">
+
+    <div class="row">
+      <div class="input-field col s12 m10">
+        <select name="userId">
+          <option value="1" selected><%= currentUser.id %></option>
+        </select>
+        <label>Your user ID will be associated with the reservation</label>
+      </div>
+    </div>
+
+    <div class="row">
+     <div class="input-field col s12 m8">
+      <select class="icons" name="vehicleId">
+        <option value="" selected>Choose your option</option>
+        <option name="vehicleId" value="1" data-icon="/images/camaro.png">camaro</option>
+        <option name="vehicleId" value="2" data-icon="/images/cherokee.png">cherokee</option>
+        <option name="vehicleId" value="3" data-icon="/images/sienna.png">sienna</option>
+      </select>
+      <label>Pick your cars</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s8">
+      <input name="startDate" type="text" class="datepicker">
+      <label for="startDate">Start date</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s8">
+      <input name="endDate" type="text" class="datepicker">
+      <label for="endDate">End Date</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      This is an inline input field:
+      <div class="input-field inline">
+        <input id="email_inline" type="text" class="validate">
+        <label for="email_inline">Notes</label>
+        <span class="helper-text" data-error="wrong" data-success="right">Please leave notes here if any.</span>
+      </div>
+    </div>
+  </div>
+  <input type="submit" value="Book Now" class="btn btn-primary green darken-2">
 </form>
+</div>
+
+
+
+
+
+
+
+
+
+

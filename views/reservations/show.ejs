@@ -1,1 +1,19 @@
-show.ejs
+<h2> #<%= reservation.id %></h2>
+
+<h4> vehicles associated with #<%= reservation.id %></h4>
+
+<% reservation.userId.forEach(function(a){%>
+		<div>
+			<a href="/reservations/<%= .id %>">
+			<%= a.title %>
+			</a>
+		</div>
+<%}); %>
+
+
+<a href="/tags/edit/<%=tag.id%>" class="btn btn-warning">
+	Change tag?	
+</a>
+<a href="/tags/<%=tag.id%>" class="btn btn-danger delete-btn">
+	Delete tag?	
+</a>
