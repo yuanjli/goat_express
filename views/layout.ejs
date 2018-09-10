@@ -36,6 +36,16 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 	<script type="text/javascript" src="/ajax-calls.js"></script>
 	<script>
+			// Other JS for materialize
+			$(document).ready(function(){
+				$('.datepicker').datepicker();
+				$('select').formSelect();
+				$(".dropdown-trigger").dropdown();
+				$('.sidenav').sidenav();
+			//$('.slider').slider();
+			$('.parallax').parallax();
+			$('.materialboxed').materialbox();
+		});
 		// Slider
 		const slider = document.querySelector('.slider');
 		// M is the materialize js library to initialize the slider. 
@@ -49,26 +59,17 @@
 		const ac = document.querySelector('.autocomplete');
 		M.Autocomplete.init(ac, {
 			data: {
-				"Aruba": null,
-				"Cancun Mexico": null,
+				"Washington": null,
+				"California": null,
 				"Hawaii": null,
 				"Florida": null,
-				"California": null,
-				"Jamaica": null,
-				"Europe": null,
-				"The Bahamas": null,
+				"Chicago": null,
+				"Oregen": null,
+				"Indiana": null,
 			}
 		});
-		// Other JS for materialize
-		$(document).ready(function(){
-			$('.datepicker').datepicker();
-			$('select').formSelect();
-			$(".dropdown-trigger").dropdown();
-			$('.sidenav').sidenav();
-			//$('.slider').slider();
-			$('.materialboxed').materialbox();
-			$('.parallax').parallax();
-		});
+
+		
 
 	</script>
 </body>

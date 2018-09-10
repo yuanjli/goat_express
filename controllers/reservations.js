@@ -17,7 +17,7 @@ router.get('/', function(req, res) { 	  // loggedIn middleware makes sure that s
 		//console.log('something=======================');
 		console.log(err);
 		//res.render('reservations/index', { reservations: reservations });
-		res.send('WHAT is going on here?');
+		res.send('Soory, You currently have not booked any reservations, so we have nothing to show you here!');
 	})	
 });
 

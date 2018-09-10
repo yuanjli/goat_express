@@ -1,0 +1,29 @@
+<div class="container">
+	<h2> Results:  </h2>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Country</th>
+				<th>fcodename</th>
+				<th>population</th>
+				<th>fclname</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% data["geonames"].forEach(function(place) { %>
+			<tr>
+				<td>	<%= place['name'] %> </td>
+				<td>  <%= place['countryName'] %> </td>  
+				<td><%= place['fcodeName'] %></td>
+				<td><%= place['population'] %></td>
+				<td><%= place['fclName'] %> </td>
+			</tr>
+			<% }); %>
+		</tbody>
+	</table>
+
+	
+	<a href="/"> Back to Home Page</a>
+</div>

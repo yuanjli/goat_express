@@ -11,6 +11,7 @@ var express = require('express');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var session = require('express-session');
+var request = require('request');   // request for APi calls.
 
 // These lines makes the session use sequelize to write session data to a db table
 var SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -21,6 +22,9 @@ var sessionStore = new SequelizeStore({
 
 // Declare app variable
 var app = express();
+
+// API call: moved down to app.get
+
 
 // Set up use statements
 app.set('view engine', 'ejs');
@@ -61,6 +65,29 @@ app.get('/', function(req, res){
 	res.render('home');
 	//res.send('hi from home route');
 });
+
+// The API call to http://www.geonames.org/ 
+app.get('/search-results', function(req, res){
+	// res.send('the search results has started')
+	var query = req.query.searched;
+	console.log(query);
+	var url = 'http://api.geonames.org/searchJSON?q=' + query + '&country=US&maxRows=15&username=myusername';
+	request(url, function (error, response, body) {
+	if(!error && response.statusCode ==200){
+		console.log
+		var parsedData = JSON.parse(body);  // Change the Json data from string to object.
+		console.log('=============>API-body:', parsedData);// parsedData["Search"][0]["Title"] // Print the HTML for the Google homepage.
+		//res.send(parsedData["Search"][0]["Title"]);
+		res.render('results', { data: parsedData });
+	}else {
+		Console.log('Something went wrong');
+		res.send("Your search results is not found"); // Print the error if one occurred
+		console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+		}
+	});
+});
+
+
 
 app.get('*', function(req, res){
 	//console.log('THIS went to the wildcard route');

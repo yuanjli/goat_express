@@ -33,28 +33,33 @@
 
 
 
-  <!-- Section: Search -->
-  <section id="search" class="section section-search blue-grey darken-1 white-text center scrollspy">
+<!-- Section: Search -->
+<section id="search" class="section section-search blue-grey darken-1 white-text center scrollspy">
+  <form action="/search-results" method="GET">
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <h3>Search Destinations</h3>
-          <div class="input-field">
-            <input class="white grey-text autocomplete" placeholder="Utah, nevada, etc..." type="text" id="autocomplete-input">
-          </div>
+        <div class="col s8">
+          <h3>GeoNames Search Services</h3>
+            <input class="white grey-text autocomplete" placeholder="California, Washington, etc..." type="text" id="autocomplete-input" name="searched">
+        </div>
+        <div class="col s3">
+          <h3>Enter</h3>
+            <input class="" type="submit" name="submit-for-result">
         </div>
       </div>
+
     </div>
-  </section>
+  </form>
+</section>
 
 
 
-   <!-- Section: Popular -->
-  <section id="popular" class="section section-popular scrollspy">
-    <div class="container">
-      <div class="row">
-        <h4 class="center">
-          <span class="red-text">Popular</span> Vehicles </h4>
+<!-- Section: Popular -->
+<section id="popular" class="section section-popular scrollspy">
+  <div class="container">
+    <div class="row">
+      <h4 class="center">
+        <span class="red-text">Popular</span> Vehicles </h4>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
@@ -108,7 +113,7 @@
 
 
 
-<!-- parallax container sections for gap between sections -->
+  <!-- parallax container sections for gap between sections -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -117,10 +122,10 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="/images/bg2.jpg" alt="/images/bg3.jpg"></div>
+    <div class="parallax"><img src="/images/bg4.jpg" alt="/images/bg3.jpg"></div>
   </div>
 
- <!-- Section: Icon Boxes -->
+  <!-- Section: Icon Boxes -->
   <section class="section section-icons grey lighten-4 center">
     <div class="container">
       <div class="row">
@@ -149,7 +154,7 @@
     </div>
   </section>
 
-<!-- parallax container sections for gap between sections -->
+  <!-- parallax container sections for gap between sections -->
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
@@ -237,7 +242,7 @@
             <i class="material-icons medium">email</i>
             <h5>Contact Us For Booking</h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sed praesentium delectus. Sit, mollitia
-              quo. Veniam repellat voluptas ipsum doloremque?</p>
+            quo. Veniam repellat voluptas ipsum doloremque?</p>
           </div>
           <ul class="collection with-header">
             <li class="collection-header">
