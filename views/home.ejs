@@ -1,100 +1,278 @@
-<h3>  Home  </h3>
-
-<h5>  The home of Goat Express Ride </h5>
-
-    
- <!-- landingHeader -->   
-    <div id="landing-header">
- 		<h1>Welcome to Goat Express!</h1>
-		<a href="/campgrounds" class="btn btn-lg btn-success">View All Vehicles</a>
-
-	<!-- 	<ul class="slideshow">
-      		<li></li>
-      		<li></li>
-      		<li></li>
-     		 <li></li>
-     		 <li></li>
-    	</ul> -->
-
-
-    </div>   
-<br>
-<br> 
-
-
-<!-- The Search form-->
-<div id="about">
-	<div id="contact" class="text-center z-depth-3">
-		<div class="container">
-			<div class="section-title center">
-				<h2 class="flow-text">Search Our Vehicles</h2>
-				<hr> </div>
-				<div>
-					<h6>Start your next amazing trip from here</h6>
-					<form name="sentMessage" id="contactForm" novalidate>
-						<!-- 	Start class row -->
-						<div class="row">
-							<div id="time" class="form-group">
-								<div Class="col s12 m6 card-panel cyan lighten-5">
-									<label for="date"> Start Date:</label>
-									<input type="date" name="date" id="date">
-									<br>
-									<label for="date">Start Time:</label>
-									<input type="time">
-								</div>
-								<div Class="col s12 m6 card-panel cyan lighten-5">
-									<label for="date2">End Date:</label>
-									<input type="date" name="date2" id="date2">
-									<br>
-									<label for="date">End Time:</label>
-									<input type="time">
-								</div>								
-							</div>
-							<p class=""> That Something is optional </p>
-
-							<div class="col s12 m12 blue lighten-5">
-								<div class="input-field col s6">
-									<input placeholder="first_name" id="first_name" type="text" class="validate">
-									<label for="first_name">First Name</label>
-								</div>
-								<div class="input-field col s6">
-									<input placeholder="last_name" id="last_name" type="text" class="validate">
-									<label for="last_name">Last Name</label>
-								</div>
-								<div class="form-group col s12">
-									<label for="email">Email:</label>
-									<input type="email" id="email" class="form-control" placeholder="Email" required="required" name="email" id="email">
-								</div>
-								<label for="textfield">Vehicle Type:</label>
-								<p> <label> <input type="checkbox" checked="checked" /> <span>Small</span> </label> </p>
-								<p> <label> <input type="checkbox">     <span>Medium</span> </label></p>
-								<p> <label><input type="checkbox">      <span>Large</span> </label> </p>
-							</div>
-							<!-- End class row -->
-						</div>
-						<!-- Message box -->
-						<div class="form-group">
-							<textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-						</div>
-
-						<div class="progress"> <div class="indeterminate">  </div> </div>
-
-						<div id="success">
-							<button type="submit" class="btn waves-effect waves-light">Search Deals</button>
-						</div>
-						<br>
-
-					</form>
-				</div>
+<!-- Section: Slider -->
+<section class="slider">
+	<ul class="slides">
+		<li>
+			<img src="/images/bg1.jpg" alt="">
+			<div class="caption center-align">
+				<h3>Take Your Dream Vacation</h3>
+				<h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam non illo earum cumque id est!</h5>
+				<a href="#" class="btn blue-grey darken-1">Learn More</a>
 			</div>
-		</div>
-	</div>
+		</li>
 
-	<br>
-	<!--<Collections>-->
+		<li>
+			<img src="/images/bg2.jpg" alt="">
+			<div class="caption left-align">
+				<h3>We Work With All Budgets</h3>
+				<h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam non illo earum cumque id est!</h5>
+				<a href="#" class="btn blue-grey darken-1">Learn More</a>
+			</div>
+		</li>
 
-		<div class="collection z-depth-2">
-			<a href="#!" class="collection-item active">Link for cool stuff</a>
-			<a href="#!" class="collection-item">link for cooler stuff</a>
-			<a href="#!" class="collection-item">link for coolest stuff</a>
-		</div>
+		<li>
+			<img src="/images/bg3.jpg" alt="">
+			<div class="caption right-align">
+				<h3>Group & Individual Getaways</h3>
+				<h5 class="light grey-text text-lighten-3 hide-on-small-only">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam non illo earum cumque id est!</h5>
+				<a href="#" class="btn blue-grey darken-1">Learn More</a>
+			</div>
+		</li>
+
+	</ul>
+</section>
+
+
+
+  <!-- Section: Search -->
+  <section id="search" class="section section-search blue-grey darken-1 white-text center scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3>Search Destinations</h3>
+          <div class="input-field">
+            <input class="white grey-text autocomplete" placeholder="Utah, nevada, etc..." type="text" id="autocomplete-input">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+   <!-- Section: Popular -->
+  <section id="popular" class="section section-popular scrollspy">
+    <div class="container">
+      <div class="row">
+        <h4 class="center">
+          <span class="red-text">Popular</span> Vehicles </h4>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="car-img" src="/images/honda_accord.JPG" alt="">
+              <span class="card-title">Honda, Accord</span>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
+                delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="car-img" src="/images/toyota-camry.jpg" alt="">
+              <span class="card-title">Toyota, Camry</span>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
+                delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img class="car-img" src="/images/vw-jetta.jpg" alt="">
+              <span class="card-title">VW Jetta</span>
+            </div>
+            <div class="card-content">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas aliquid fugiat corporis laudantium, architecto
+                delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <a href="#contact" class="btn btn-large grey darken-3">
+            <i class="material-icons left">send</i> Contact For Booking
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- parallax container sections for gap between sections -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light white-text">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/images/bg2.jpg" alt="/images/bg3.jpg"></div>
+  </div>
+
+ <!-- Section: Icon Boxes -->
+  <section class="section section-icons grey lighten-4 center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">room</i>
+            <h4>Pick Where</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">store</i>
+            <h4>Travel Shop</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card-panel">
+            <i class="material-icons large teal-text">airplanemode_active</i>
+            <h4>Fly Cheap</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem, velit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- parallax container sections for gap between sections -->
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light white-text">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/images/bg3.jpg" alt="/images/bg2.jpg"></div>
+  </div>
+
+  <!-- Section: Gallery -->
+  <section id="gallery" class="section section-gallery scrollspy">
+    <div class="container">
+      <h4 class="center">
+        <span class="teal-text">Photo </span> Gallery
+      </h4>
+      <div class="row">
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g1.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g2.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g3.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g4.jpeg" alt="">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g5.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g6.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g1.jpeg" alt="">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed responsive-img" src="/images/g1.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section: Follow -->
+  <section class="section section-follow light-blue darken-1 white-text center">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h4>Follow US</h4>
+          <p>Follow us on social media for special offers</p>
+          <a href="https://www.facebook.com" target="_blank" class="white-text">
+            <i class="fab fa-facebook fa-4x"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="white-text">
+            <i class="fab fa-twitter fa-4x"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="white-text">
+            <i class="fab fa-linkedin fa-4x"></i>
+          </a>
+          <a href="https://googleplus.com" target="_blank" class="white-text">
+            <i class="fab fa-google-plus fa-4x"></i>
+          </a>
+          <a href="https://pinterest.com" target="_blank" class="white-text">
+            <i class="fab fa-pinterest fa-4x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section: Contact -->
+  <section id="contact" class="section section-contact scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card-panel light-blue darken-1 white-text center">
+            <i class="material-icons medium">email</i>
+            <h5>Contact Us For Booking</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus sed praesentium delectus. Sit, mollitia
+              quo. Veniam repellat voluptas ipsum doloremque?</p>
+          </div>
+          <ul class="collection with-header">
+            <li class="collection-header">
+              <h4>Location</h4>
+            </li>
+            <li class="collection-item">Web Dev</li>
+            <li class="collection-item">Downtown</li>
+            <li class="collection-item">Seattle WA, 98101</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <div class="card-panel grey lighten-3">
+            <h5>Please fill out this form</h5>
+            <div class="input-field">
+              <input type="text" placeholder="Name" id="name">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field">
+              <input type="email" placeholder="Email" id="email">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Phone" id="phone">
+              <label for="phone">Phone</label>
+            </div>
+            <div class="input-field">
+              <textarea class="materialize-textarea" placeholder="Enter Message" id="message"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <input type="submit" value="Submit" class="btn light-blue darken-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+

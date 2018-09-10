@@ -1,19 +1,18 @@
-<h2> #<%= reservation.id %></h2>
+<div class="container">
+	<h2> #<%= reservation.id %></h2>
 
-<h4> vehicles associated with #<%= reservation.id %></h4>
+	<h4> vehicle info associated with this reservation: </h4>
 
-<% reservation.userId.forEach(function(a){%>
-		<div>
-			<a href="/reservations/<%= a.id %>">
-			<%= a.title %>
-			</a>
-		</div>
-<% }); %>
+	<p> # <%= reservation.vehicle.make %> </p>
+	<p> # <%= reservation.vehicle.model %> </p>
+	<p> # <%= reservation.startDate %> </p>
+	<p> # <%= reservation.endDate %> </p>
 
+	<a href="/reservations/edit/<%=reservation.id%>" class="btn btn-warning">
+		Change tag?	
+	</a>
+	<a href="/reservations/<%=reservation.id%>" class="btn btn-danger delete-btn">
+		Delete tag?	
+	</a>
 
-<a href="/reservations/edit/<%=reservation.id%>" class="btn btn-warning">
-	Change tag?	
-</a>
-<a href="/reservations/<%=reservation.id%>" class="btn btn-danger delete-btn">
-	Delete tag?	
-</a>
+</div>

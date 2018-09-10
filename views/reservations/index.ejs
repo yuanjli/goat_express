@@ -1,26 +1,40 @@
-<h2> All the reservations are HERE: </h2>
 
-<% reservations.forEach(function(reservation) { %>
+<div class="container">
+	<h2> All the Reservations: </h2>
+	<div class="row">
 
+		<% reservations.forEach(function(reservation) { %>
+		<div>
 
-<div>
-	
-	<a href="/reservations/<%= reservation.id%>" style="font-size:25px">
-		=><%= reservation.id%> #<%= reservation.startDate %> #<%= reservation.endDate %>
-	</a>
-	
-	<a href="/reservations/edit/<%=reservation.id%>" class="btn edit-btn">
-		Change reservation?	
-	</a>
-	
-	<a href="/reservations/<%=reservation.id%>" class="btn delete-btn">
-		Delete reservation?	
-	</a>
-	
+			<div class="col s12 m4">
+				<div class="card grey darken-1">
+					<div class="card-content white-text">
+						<span class="card-title">
+							<a href="/reservations/<%= reservation.id%>"> 
+								#<%= reservation.id%> 
+							</a> 
+						</span>
+						<p>I am a very simple reservation.
+							<a href="/reservations/<%= reservation.id%>" style="font-size:25px">
+								<br>From: |<%= reservation.startDate.toDateString() %>| 
+								<br>To:   |<%= reservation.endDate.toDateString() %>|
+							</a>
+						</p>
+
+					</div>
+					<div class="card-action">
+						<a href="/reservations/edit/<%=reservation.id%>" class="btn orange">
+							Change reservation?	
+						</a>
+						<hr>	
+						<a href="/reservations/<%=reservation.id%>" class="btn delete-btn red">
+						Delete reservation? </a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<%});%>
+
+	</div>
 </div>
-
-
-
-<%});%>
-
-

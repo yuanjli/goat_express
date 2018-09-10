@@ -36,6 +36,7 @@ app.use(session({
   	cookie: { maxAge: 30 * 60 * 1000 },
   	store: sessionStore
 })); 
+
 sessionStore.sync(); // creates the sessions table    
 app.use(flash());
 app.use(passport.initialize());     // make sure that session is above the passport
@@ -62,7 +63,7 @@ app.get('/', function(req, res){
 });
 
 app.get('*', function(req, res){
-	console.log('THIS went to the wildcard route');
+	//console.log('THIS went to the wildcard route');
 	res.render('error');
 	//res.send('hi from home route');
 });

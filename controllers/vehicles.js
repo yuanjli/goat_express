@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../models'); // add it to the database 
 
+
 // INDEX page route. Show all vehicles: 
 router.get('/', function(req, res){
 	db.vehicle.findAll().then(function(allVehicles){

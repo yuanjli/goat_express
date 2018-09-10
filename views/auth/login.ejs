@@ -1,36 +1,38 @@
-<h2> Login </h2>
+<div class="container">
 
-<form action="/auth/login" method="POST"> 
-	<div class="row">
+	<h2> Login </h2>
 
-		<div class="input-field col s12 m6">
-			<label for="email"> Email  </label>
-			<input type="email"  id="email" name="email" class="validate" >
-		</div>
+	<form action="/auth/login" method="POST"> 
+		<div class="row">
 
-		<div class="input-field col s12 m6">
-			<label for="password"> Password  </label>
-			<input type="password"  id="password" name="password" class="validate" >
-		</div>
+			<div class="input-field col s12 m6">
+				<label for="email"> Email  </label>
+				<input type="email"  id="email" name="email" class="validate" >
+			</div>
 
-		<div>
-			<button class="btn waves-effect waves-light" type="submit" name="action">Login
-				<i class="material-icons right"> ! </i>
-			</button>
-		</div>
+			<div class="input-field col s12 m6">
+				<label for="password"> Password  </label>
+				<input type="password"  id="password" name="password" class="validate" >
+			</div>
 
-	</div> 
-</form>
+			<div>
+				<button class="btn waves-effect waves-light" type="submit" name="action">Login
+					<i class="material-icons right"> ! </i>
+				</button>
+			</div>
 
-
-<hr> 
-
-<h3> Or ... </h3>
-<p> Login with Facebook </p>
-
-<a href="/auth/facebook" class="btn indigo darken-2" style="background-color: #3B">
-	<i class="fa fa-facebook-official"></i> |  LOGIN  
-</a>
+		</div> 
+	</form>
 
 
+	<hr> 
 
+	<h3> Or ... </h3>
+	<p> Login with Facebook </p>
+
+	<a href="/auth/facebook" class="btn indigo darken-2" style="background-color: #3B">
+		<i class="fa fa-facebook-official"></i> |  LOGIN  
+	</a>
+
+
+</div>

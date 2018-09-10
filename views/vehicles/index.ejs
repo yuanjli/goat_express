@@ -1,25 +1,35 @@
-<h2> All the Vehicles are HERE: </h2>
+<div class="container">
+	<h2> All the Vehicles: </h2>
 
-<% vehicles.forEach(function(vehicle) {%>
+
+	<div class="row">
+		<% vehicles.forEach(function(vehicle) {%>
+		
+		<div class="col s12 m3">
+			<div class="card">
+				<div class="card-image">
+					<img src="/images/bus1.jpg">
+					<span class="card-title"><%= vehicle.model %></span>
+				</div>
+				<div class="card-content">
+					<p>I am a very simple card. I am good at containing small bits of information.
+					I am convenient because I require little markup to use effectively.</p>
+				</div>
+				<div class="card-action">
+					<a href="/vehicles/<%= vehicle.id%>" style="font-size:25px"> <%= vehicle.make %></a>
+				</div>
+
+			</div>
+			<a href="/vehicles/edit/<%=vehicle.id%>" class="btn btn-warning">
+				Update vehicle?	
+			</a>
+		</div>
 
 
-<div>
-	
-	<a href="/vehicles/<%= vehicle.id%>" style="font-size:25px">
-		==> <%= vehicle.model %>  <==
-	</a>
-	
-	<a href="/vehicles/edit/<%=vehicle.id%>" class="btn btn-warning">
-		Change reservation?	
-	</a>
-	
-	<a href="/reservations/<%=vehicle.id%>" class="btn btn-danger delete-btn">
-		Delete reservation?	
-	</a>
+
+
+
+		<% });%>
+	</div>
+
 </div>
-
-
-
-<%});%>
-
-

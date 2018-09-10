@@ -1,0 +1,37 @@
+<div class="container">
+  <form id="edit-reservation" action="/reservations/<%= reservation.id %>">
+
+   <div class="form-group">  
+    <br>
+    <h2> You are about to change your reservation time:</h2>
+    <div class="row">
+     <div class="input-field col s12 m8">
+      <select class="icons" name="vehicleId">
+        <option value="<%= reservation.vehicleId %>" selected><%= reservation.vehicleId %></option>
+
+      </select> <label> The vehicle that you selected can not be changed.</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s8">
+      <input name="startDate" type="text" value="<%= reservation.startDate %>" class="datepicker">
+      <label for="startDate">Start date</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s8">
+      <input name="endDate" type="text" value="<%= reservation.endDate %>" class="datepicker">
+      <label for="endDate">End Date</label>
+    </div>
+  </div>
+
+</div>
+
+<input type="submit" value="Change It!" class="btn btn-warning">
+
+</form>
+</div>
+
+

@@ -32,7 +32,7 @@ router.get('/signup', function(req, res) {
 
 // handling sign up logic 
 router.post('/signup', function(req, res){
-	console.log(req.body);
+	//console.log(req.body);
 	req.body.admin = false;
 	db.user.findOrCreate({
 		where: { email: req.body.email },
@@ -53,7 +53,7 @@ router.post('/signup', function(req, res){
 			res.redirect('/auth/login');
 		}
 	}).catch(function(err){
-		console.log(err);
+		//console.log(err);
 		req.flash('error', err.message);
 		res.redirect('/auth/signup');
 		//res.send(err);
