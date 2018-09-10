@@ -1,42 +1,43 @@
-<h2>  Sign up </h2>
+<div class="container"> 
+  <h2>  Sign up </h2>
 
-<form action="/auth/signup" method="POST">
-  <div class="row">
-    <div class="input-field col s12 m6">
-      <label for="firstname">First Name</label>
-      <input type="text" id="firstname" name="firstname" class="validate">
+  <form action="/auth/signup" method="POST">
+    <div class="row">
+      <div class="input-field col s12 m6">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname" class="validate">
+      </div>
+      <div class="input-field col s12 m6">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname" class="validate">
+      </div>
+      <div class="input-field col s12 m4">
+        <label for="dob">Birthday</label>
+        <input type="text" id="dob" name="dob" class="datepicker">
+      </div>
     </div>
-    <div class="input-field col s12 m6">
-      <label for="lastname">Last Name</label>
-      <input type="text" id="lastname" name="lastname" class="validate">
+    <div class="row">
+      <div class="input-field col s12 m6">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="validate">
+      </div>
+      <div class="input-field col s12 m6">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="validate">
+      </div>
     </div>
-    <div class="input-field col s12 m4">
-      <label for="dob">Birthday</label>
-      <input type="text" id="dob" name="dob" class="datepicker">
+    <div class="row">
+      <div class="input-field col s12 m8">
+        <label for="image">Profile Image</label>
+        <input type="url" id="image" name="image" class="validate">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s12 m6">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" class="validate">
-    </div>
-    <div class="input-field col s12 m6">
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" class="validate">
-    </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s12 m8">
-      <label for="image">Profile Image</label>
-      <input type="url" id="image" name="image" class="validate">
-    </div>
-  </div>
-  <button class="btn waves-effect waves-light" type="submit" name="action">Register Now
-    <i class="material-icons right">send</i>
-  </button>
-</form>
+    <button class="btn waves-effect waves-light" type="submit" name="action">Register Now
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
 
-
+</div>
 
 
 
