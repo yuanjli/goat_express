@@ -4,7 +4,8 @@ var router = express.Router();
 // Get the authorization helper function 
 var loggedIn = require('../middleware/loggedin');
 var db = require('../models'); // add it to the database 
-
+// Get the authorization helper function 
+var loggedIn = require('../middleware/loggedin');
 
 // Define routes 
 // Index pages show all reservations:
@@ -48,7 +49,7 @@ router.get('/new', function(req, res){
 });
 
 // CREATE - add new reservation to DB; post request for adding a reservation
-router.post('/', function(req, res){ 
+router.post('/', loggedIn, function(req, res){ 
 	// console.log(req.body);   		// for testing purpose
 	//res.send(req.body);										// for testing purpose
 	console.log('=========================Should show NEWLY ADDED reservation=======================')
@@ -83,7 +84,7 @@ router.get('/:id', function(req, res){	// found the author ID
 
 
 // Change the reservation dates;
-router.put('/:id', function(req, res){   // had to be called from ajax 
+router.put('/:id', loggedIn, function(req, res){   // had to be called from ajax 
 	//console.log("YAY WE HIT THE RIGHT PUT ROUTE");
 	//console.log(req.body);
 	//res.send(req.body);
@@ -101,7 +102,7 @@ router.put('/:id', function(req, res){   // had to be called from ajax
 
 
 // Ths DELETE route.
-router.delete('/:id', function(req, res){        // had to be called from ajax 
+router.delete('/:id', loggedIn, function(req, res){        // had to be called from ajax 
 	// This :id is the req.params.id	 // req exist everytime the frond end sends a request to the back end. 
 	console.log('=========================Should delete the particular reservation =======================')
 	db.reservation.findOne({

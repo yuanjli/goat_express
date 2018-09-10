@@ -26,20 +26,13 @@
 </div>
 
 <div>
-	<h3> what are your thoughts ? </h3>
+	<h5> what are your thoughts ? (Currently, This is a dumb box that won't get save in the database) </h5>
 	<form method="POST" action="/comments"> 
 		<div class="form-group">
 			<label> Comment:</label>
 			<textarea name="content">  </textarea>
 		</div>
-		<div class="form-group">
-			<label for="name">User:</label>
 
-			<select name="userId" class="form-control"> 					 
-          		<option value="1" selected><%= currentUser.id %></option>
-			</select>
-			Don't see your name? <a href="/auth/signup">Register Here</a>!
-		</div>
 		<input type="hidden" name="vehicleId" value="<%= vehicle.id %>">
 		<input type="submit" value="Add comment" class="btn btn-warning">
 

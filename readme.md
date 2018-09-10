@@ -1,7 +1,15 @@
 # Goat Express : how to Use
 
+Full stack node/express app with basic user authentication. 
+This is a prototype of online rental and booking for small business owners. 
+To use the app,
+	You can Signup or login. 
+	You you want to post your vehicle to list for rental, you need to contact me to become a owner.
+	Otherwise, you can book reservations after you login. 
+	All the reservations will show up on the reservation tab. and you can edit them or delete them. 
 
-is a bare bones node/express app with basic user authentication. It exists so that I don't need to do this bit from scratch everytime I start a new project that needs to include auth. Instead, I can take this fairly generic boilerplate code and customize it on a new project. 
+	The home page has a service which allows you to enter a name of a place and give a result of related places.
+
 
 
 ## what it includes 
@@ -11,6 +19,13 @@ is a bare bones node/express app with basic user authentication. It exists so th
 * Passport and Passport-Local for authentication 
 * Express sessions to keep user logged in from page to page
 * Connect-Flash for error/success messages 
+
+* Deployed on Heroku : https://yuanjli-express-car-app.herokuapp.com/	
+* A RESTful API call
+* Routes for GET, POST, PUT, DELETE.
+
+
+
 
 
 ### User Model 
