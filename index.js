@@ -71,6 +71,7 @@ app.get('/search-results', function(req, res){
 	// res.send('the search results has started')
 	var query = req.query.searched;
 	console.log(query);
+	//process.env.UN_A_KEY
 	var url = 'http://api.geonames.org/searchJSON?q=' + query + '&country=US&maxRows=15&username=myusername';
 	request(url, function (error, response, body) {
 	if(!error && response.statusCode ==200){
